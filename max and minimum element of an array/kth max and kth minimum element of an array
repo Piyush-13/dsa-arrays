@@ -1,0 +1,57 @@
+// Java program to get the minimum and
+// maximum value after the sorting the ArrayList
+// using Collection class function
+
+import java.util.*;
+import java.util.Collections;
+
+public class MaxMinSort {
+	public static void main(String args[])
+	{
+		// Creating arraylist
+		ArrayList<Integer> arr = new ArrayList<Integer>();
+
+		// Adding object in arraylist
+		arr.add(10);
+		arr.add(12);
+		arr.add(5);
+		arr.add(8);
+		arr.add(21);
+		arr.add(16);
+		arr.add(15);
+
+		// Storing the size of the ArrayList in variable n
+		int n = arr.size();
+		int i;
+
+		System.out.println("Elements of the ArrayList : ");
+
+		for (i = 0; i < n; i++) {
+			System.out.print(arr.get(i) + " ");
+		}
+
+		System.out.println();
+
+		// The ArrayList will be sorted using predefined
+		// function
+		Collections.sort(arr);
+
+		System.out.println("ArrayList after sorting : ");
+
+		for (i = 0; i < n; i++) {
+			System.out.print(arr.get(i) + " ");
+		}
+
+		System.out.println();
+
+		// First and last element of the ArrayList gets stored
+		// into min and max variable
+		int min = arr.get(0);
+        		int max = arr.get(n - 1);
+
+		System.out.println("Minimum is at second position  : " + min);
+        		System.out.println("Maximum is at second position  : " + max);
+
+
+	}
+}
